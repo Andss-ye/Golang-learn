@@ -43,6 +43,11 @@ func showMenu() {
 	fmt.Println("========================")
 	fmt.Println("1. Packages - Trabajo con paquetes y archivos")
 	fmt.Println("2. Variables - Declaración y uso de variables")
+	fmt.Println("3. Valores - Tipos de datos y valores en Go")
+	fmt.Println("4. Condiciones - Estructuras condicionales en Go")
+	fmt.Println("5. For - Bucles For en Go")
+	fmt.Println("6. Switch - Estructura Switch en Go")
+	fmt.Println("7. Arrays - Estructura de Arrays en Go")
 	fmt.Println("0. Salir")
 	fmt.Println("========================")
 }
@@ -58,6 +63,31 @@ func executeClass(option int) bool {
 		fmt.Println("\n🔤 Ejecutando Clase 2: Variables")
 		fmt.Println("--------------------------------")
 		classes.Variables()
+		return true
+	case 3:
+		fmt.Println("\n🔢 Ejecutando Clase 3: Valores")
+		fmt.Println("--------------------------------")
+		classes.Valores()
+		return true
+	case 4:
+		fmt.Println("\n🔀 Ejecutando Clase 4: Condiciones")
+		fmt.Println("----------------------------------")
+		classes.Condiciones()
+		return true
+	case 5:
+		fmt.Println("\n🔁 Ejecutando Clase 5: For")
+		fmt.Println("---------------------------")
+		classes.For()
+		return true
+	case 6:
+		fmt.Println("\n🔄 Ejecutando Clase 6: Switch")
+		fmt.Println("-----------------------------")
+		classes.Switch()
+		return true
+	case 7:
+		fmt.Println("\n🔢 Ejecutando Clase 7: Arrays")
+		fmt.Println("-----------------------------")
+		classes.Arrays()
 		return true
 	case 0:
 		return false
