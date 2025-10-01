@@ -48,6 +48,7 @@ func showMenu() {
 	fmt.Println("5. For - Bucles For en Go")
 	fmt.Println("6. Switch - Estructura Switch en Go")
 	fmt.Println("7. Arrays - Estructura de Arrays en Go")
+	fmt.Println("8. Slices - Estructura de Slices en Go")
 	fmt.Println("0. Salir")
 	fmt.Println("========================")
 }
@@ -88,6 +89,11 @@ func executeClass(option int) bool {
 		fmt.Println("\n🔢 Ejecutando Clase 7: Arrays")
 		fmt.Println("-----------------------------")
 		classes.Arrays()
+		return true
+	case 8:
+		fmt.Println("\n📚 Ejecutando Clase 8: Slices")
+		fmt.Println("-----------------------------")
+		classes.Slices()
 		return true
 	case 0:
 		return false
