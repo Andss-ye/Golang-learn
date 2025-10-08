@@ -140,6 +140,7 @@ func showExercisesMenu() {
 	fmt.Println("1. Variables Básicas - Declaración y tipos")
 	fmt.Println("2. Condicionales - If/else y switch")
 	fmt.Println("3. Ciclos - Loops")
+	fmt.Println("4. Arrays")
 	fmt.Println("0. Volver al menú principal")
 	fmt.Println("============================")
 }
@@ -210,6 +211,11 @@ func executeExercises(option int) bool {
 		fmt.Println("\n🔀 Ejercicio 3: loops")
 		fmt.Println("------------------------------")
 		exercises.BuclesFor()
+		return true
+	case 4:
+		fmt.Println("\n🔀 Ejercicio 4: Arrays")
+		fmt.Println("------------------------------")
+		exercises.Arrays()
 		return true
 	case 0:
 		return false
