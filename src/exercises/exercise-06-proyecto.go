@@ -17,8 +17,8 @@ func ProyectoIntegrador() {
 	// - edades []int
 	// - calificaciones []float64
 	nombre := []string{"Andrew", "Leon", "Daniel", "Nicolas", "Angel"}
-	edades := []int{19, 20, 18, 19, 21}
-	calificaciones := []float64{3.5, 3.1, 4.3, 5.0, 2.3}
+	edades := []int{19, 10, 18, 19, 11}
+	calificaciones := []float64{3.5, 3.1, 4.3, 5.0, 8.3}
 
 	// TODO 2: Mostrar información completa
 	// Recorre los datos con un for loop
@@ -60,12 +60,61 @@ func ProyectoIntegrador() {
 	// - Estudiantes menores de 20 años
 	// - Estudiantes con calificación >= 8.0 (excelentes)
 	// - Estudiantes con calificación < 6.0 (necesitan ayuda)
+	menores_20 := []string{}
+	excelentes := []string{}
+	regulares := []string{}
+	for i := 0; i < len(nombre); i++ {
+		if edades[i] < 20 {
+			menores_20 = append(menores_20, nombre[i])
+		}
+	}
+
+	for i := 0; i < len(menores_20); i++ {
+		if calificaciones[i] >= 8.0 {
+			excelentes = append(excelentes, menores_20[i])
+		}
+		if calificaciones[i] < 6.0 {
+			regulares = append(regulares, menores_20[i])
+		}
+	}
+
+	if len(excelentes) == 0 {
+		fmt.Println("No hubieron estudiantes excelentes")
+	} else {
+		fmt.Printf("Los estudiantes excelentes fueron: \n")
+		for i := 0; i < len(excelentes); i++ {
+			fmt.Printf("%v\n", excelentes[i])
+		}
+	}
+
+	if len(regulares) == 0 {
+		fmt.Println("No hubieron estudiantes regulares :D")
+	} else {
+		fmt.Printf("Los estudiantes regulares fueron: \n")
+		for i := 0; i < len(regulares); i++ {
+			fmt.Printf("%v\n", regulares[i])
+		}
+	}
+
 
 	// TODO 5: Sistema de mejora
 	// Simula que algunos estudiantes mejoran:
 	// - Agrega 1.0 punto a estudiantes con calificación < 6.0
 	// - Recalcula y muestra las nuevas estadísticas
 	// - Compara antes vs después
+	var suma float64
+	fmt.Println("---------------------------------------------")
+	for i := 0; i < len(nombre); i++ {
+		fmt.Printf("calificacion actual: %v\n", calificaciones[i])
+		if calificaciones[i] < 6.0 {
+			calificaciones[i] = calificaciones[i] + 1.0
+		}
+		fmt.Printf("nueva calificacion: %v\n", calificaciones[i])
+		suma += calificaciones[i]
+	}
+	nuevo_promedio := suma / float64(len(nombre))
+	fmt.Printf("Nuevo promedio de calificaciones: %v\n", nuevo_promedio)
+	fmt.Printf("Promedio anterior de calificaciones: %v\n", promedio_calificaciones)
 
 	fmt.Println("\n¡Este proyecto usa TODO lo que aprendiste!")
 }
