@@ -147,6 +147,11 @@ func showExercisesMenu() {
 	fmt.Println("4. Arrays")
 	fmt.Println("5. Slices")
 	fmt.Println("6. Proyecto Integrador")
+	fmt.Println("7. Maps")
+	fmt.Println("8. Funciones")
+	fmt.Println("9. Punteros")
+	fmt.Println("10. Structs")
+	fmt.Println("11. Proyecto Final - Aplicación Completa")
 	fmt.Println("0. Volver al menú principal")
 	fmt.Println("============================")
 }
@@ -252,6 +257,31 @@ func executeExercises(option int) bool {
 		fmt.Println("\n🔀 Ejercicio 6: ProyectoIntegrador")
 		fmt.Println("------------------------------")
 		exercises.ProyectoIntegrador()
+		return true
+	case 7:
+		fmt.Println("\n🔀 Ejercicio 7: Maps")
+		fmt.Println("------------------------------")
+		exercises.ExerciseMaps()
+		return true
+	case 8:
+		fmt.Println("\n🔀 Ejercicio 8: Funciones")
+		fmt.Println("------------------------------")
+		exercises.ExerciseFunctions()
+		return true
+	case 9:
+		fmt.Println("\n🔀 Ejercicio 9: Punteros")
+		fmt.Println("------------------------------")
+		exercises.ExercisePointers()
+		return true
+	case 10:
+		fmt.Println("\n🔀 Ejercicio 10: Structs")
+		fmt.Println("------------------------------")
+		exercises.ExerciseStructs()
+		return true
+	case 11:
+		fmt.Println("\n🔀 Ejercicio 11: Proyecto Final - Aplicación Completa")
+		fmt.Println("------------------------------")
+		exercises.ExerciseIntegrador()
 		return true
 	case 0:
 		return false
