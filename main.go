@@ -62,6 +62,7 @@ func showMenu() {
 	fmt.Println("10. Funciones - Declaración y uso de funciones")
 	fmt.Println("11. Punteros - Introducción a punteros en Go")
 	fmt.Println("12. Structs - Introducción a structs en Go")
+	fmt.Println("13. Enums - Introduccion a structs en Go")
 	fmt.Println("0. Volver al menú principal")
 	fmt.Println("========================")
 }
@@ -217,6 +218,11 @@ func executeClass(option int) bool {
 		fmt.Println("\n🏗️ Ejecutando Clase 12: Structs")
 		fmt.Println("-----------------------------")
 		classes.Structs()
+		return true
+	case 13:
+		fmt.Println("\n🔧 Ejecutando Clase 13: Enums")
+		fmt.Println("-----------------------------")
+		classes.Enums()
 		return true
 	case 0:
 		return false
