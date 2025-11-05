@@ -155,6 +155,9 @@ func showExercisesMenu() {
 	fmt.Println("9. Punteros")
 	fmt.Println("10. Structs")
 	fmt.Println("11. Proyecto Final - Aplicación Completa")
+	fmt.Println("13. Enums")
+	fmt.Println("14. Erros")
+	fmt.Println("15. Routines and channels")
 	fmt.Println("0. Volver al menú principal")
 	fmt.Println("============================")
 }
@@ -300,6 +303,21 @@ func executeExercises(option int) bool {
 		fmt.Println("\n🔀 Ejercicio 11: Proyecto Final - Aplicación Completa")
 		fmt.Println("------------------------------")
 		exercises.ExerciseIntegrador()
+		return true
+	case 13:
+		fmt.Println("\n🔀 Ejercicio 13: Enums")
+		fmt.Println("------------------------------")
+		exercises.ExerciseEnums()
+		return true
+	case 14:
+		fmt.Println("\n🔀 Ejercicio 14: Errors")
+		fmt.Println("------------------------------")
+		exercises.ExerciseErrors()
+		return true
+	case 15:
+		fmt.Println("\n🔀 Ejercicio 15: Routines and channels")
+		fmt.Println("------------------------------")
+		exercises.ExerciseRoutinesAndChannels()
 		return true
 	case 0:
 		return false
